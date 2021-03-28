@@ -1,7 +1,14 @@
+/*
+  Función lógica de la página principal
+  -consumo de api
+  -despliegue de los productos
+*/
+
+
 
 const search = document.getElementById("search");
 const url = "https://nodejs-bsale-api.herokuapp.com";
-/* */
+
 search.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     divProducts.innerHTML = "";
@@ -43,7 +50,7 @@ export const fetchSomeProduct = (nameToSearch) => {
   }
 };
 
-/* SCREENS */
+/* SCREEN  - Función que renderiza los elementos en index.html fetcheados desde la API */
 const printProduct = (prod) => {
   const product = `
       <li class="product-content">
